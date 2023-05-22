@@ -11,8 +11,8 @@ function eqArrays(arr1, arr2) {
   }
 }
 
-function assertArraysEqual(arr1, arr2) {
-  if (eqArrays(arr1, arr2)) {
+function assertArraysEqual(actual, expected) {
+  if (eqArrays(actual, expected)) {
     console.log(`✅✅✅ Assertion Passed: both arrays are equivalent`);
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: both arrays are not equivalent`);
