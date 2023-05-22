@@ -1,4 +1,4 @@
-//Implement without which will return a subset of a given array, removing unwanted elements. 
+//Implement without which will return a subset of a given array, removing unwanted elements.
 function without(arr, exclude) {
   let results = [...arr];
   for (let i = 0; i < exclude.length; i++) {
@@ -21,8 +21,8 @@ function eqArrays(arr1, arr2) {
   }
 }
 
-function assertArraysEqual(arr1, arr2) {
-  if (eqArrays(arr1, arr2)) {
+function assertArraysEqual(actual, expected) {
+  if (eqArrays(actual, expected)) {
     console.log(`✅✅✅ Assertion Passed: both arrays are equivalent`);
   } else {
     console.log(`🛑🛑🛑 Assertion Failed: both arrays are not equivalent`);
