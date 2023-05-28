@@ -1,3 +1,14 @@
+const map = function (arr, callback) {
+  const results = [];
+
+  for (let item of arr) {
+    results.push(callback(item));
+  }
+
+  return results;
+};
+
+// TESTING
 function eqArrays(arr1, arr2) {
   if (arr1.length === arr2.length) {
     for (let i = 0; i < arr1.length; i++) {
@@ -24,8 +35,19 @@ function assertArraysEqual(actual, expected) {
   }
 }
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]);
-assertArraysEqual([1, 2, 3], [3, 2, 1]);
-assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]);
-assertArraysEqual(["1", "2", "3"], ["1", "2", 3]);
-assertArraysEqual(["1", "2", "3"], ["1", "2", "3", "4"]);
+const words = ["ground", "control", "to", "major", "tom"];
+const nums = [2, 5, 7, 4, 88, 33, 1];
+const letters = ["a", "A", "b", "c", "D"];
+
+assertArraysEqual(
+  map(words, (word) => word[0]),
+  ["g", "c", "t", "m", "t"]
+);
+assertArraysEqual(
+  map(nums, (num) => num ** 3),
+  [8, 125, 343, 64, 681472, 35937, 1]
+);
+assertArraysEqual(
+  map(letters, (letter) => letter.toUpperCase()),
+  ["A", "A", "B", "C", "D"]
+);
