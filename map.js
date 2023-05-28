@@ -1,4 +1,4 @@
-const map = function (arr, callback) {
+const map = function(arr, callback) {
   const results = [];
 
   for (let item of arr) {
