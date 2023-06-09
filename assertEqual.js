@@ -1,6 +1,6 @@
 "use strict";
 
-const assertEqual = function (actual, expected) {
+const assertEqual = function(actual, expected) {
   const inspect = require("util").inspect;
   if (actual === expected) {
     console.log(
