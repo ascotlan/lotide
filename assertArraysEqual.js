@@ -1,3 +1,5 @@
+"use strict";
+
 const eqArrays = require("./eqArrays");
 
 function assertArraysEqual(actual, expected) {

@@ -1,3 +1,5 @@
+"use strict";
+
 // return the head of an array
 function head(arr) {
   return arr[0];

@@ -1,3 +1,5 @@
+"use strict";
+
 // index.js
 const assertArraysEqual = require("./assertArraysEqual");
 const assertEqual = require("./assertEqual");

@@ -1,29 +1,15 @@
-function flatten(arr) {
-  return arr.reduce((acc, el) => acc.concat(el), []);
-}
+"use strict";
 
-// TESTING
-function eqArrays(arr1, arr2) {
-  if (arr1.length === arr2.length) {
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
-        return false;
-      }
+function flatten(array, result) {
+  for (let element of array) {
+    if (Array.isArray(element)) {
+      flatten(element, result);
+    } else {
+      result.push(element);
     }
-    return true;
-  } else {
-    return false;
   }
-}
 
-function assertArraysEqual(actual, expected) {
-  if (eqArrays(actual, expected)) {
-    console.log(`✅✅✅ Assertion Passed: both arrays are equivalent`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: both arrays are not equivalent`);
-  }
+  return result;
 }
-
-assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
 
 module.exports = flatten;

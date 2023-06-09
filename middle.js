@@ -1,3 +1,5 @@
+"use strict";
+
 function middle(arr) {
   const len = arr.length;
   let mid = 0;

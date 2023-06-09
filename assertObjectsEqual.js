@@ -1,3 +1,5 @@
+"use strict";
+
 //Implement assertObjectsEqual which will take in two objects and console.log an appropriate message to the console.
 
 function assertObjectsEqual(actual, expected) {
