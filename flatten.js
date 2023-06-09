@@ -1,6 +1,6 @@
 "use strict";
 
-function flatten(array, result) {
+function flatten(array, result = []) {
   for (let element of array) {
     if (Array.isArray(element)) {
       flatten(element, result);
