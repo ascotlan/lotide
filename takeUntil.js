@@ -1,6 +1,6 @@
 // Implement takeUntil which will keep collecting items from a provided array until the callback provided returns a truthy value.
 
-const takeUntil = function(array, callback) {
+const takeUntil = function (array, callback) {
   let result = [];
   for (const element of array) {
     if (!callback(element)) {
@@ -55,3 +55,5 @@ const results2 = takeUntil(data2, (x) => x === ",");
 
 assertArraysEqual(results1, [1, 2, 5, 7, 2]);
 assertArraysEqual(results2, ["I've", "been", "to", "Hollywood"]);
+
+module.exports = takeUntil;

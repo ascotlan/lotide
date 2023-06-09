@@ -1,4 +1,4 @@
-const map = function(arr, callback) {
+const map = function (arr, callback) {
   const results = [];
 
   for (let item of arr) {
@@ -51,3 +51,5 @@ assertArraysEqual(
   map(letters, (letter) => letter.toUpperCase()),
   ["A", "A", "B", "C", "D"]
 );
+
+module.exports = map;
